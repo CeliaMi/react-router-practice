@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
-
+import Navbar from "../components/NavBar"
 
 const LayoutPublic = () =>{
     return (
         <>
-        <nav>Navar</nav>
+        <Navbar/>
         <main>
             <Outlet/>
         </main>

@@ -3,22 +3,30 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Blog from "../pages/Blog";
 import NotFound from "../pages/NotFound";
+import LayoutPublic from "../layout/LayoutPublic";
 
 export const router = createBrowserRouter([
 
     {
         path: '/',
-        element: <Home />,
-        errorElement: <NotFound />
-    },
-    {
-        path: '/about',
-        element: <About/>,
-        errorElement: <NotFound />
-    },
-    {
-        path: '/blog',
-        element: <Blog/>,
-        errorElement: <NotFound />
-    }
+        element: <LayoutPublic />,
+        errorElement: <NotFound />,
+        children: [
+            {
+                path: '/',
+                element: <Home />,
+            },
+            {
+                path: '/about',
+                element: <About/>,
+            },
+            {
+                path: '/blog',
+                element: <Blog/>,
+            }
+
+        ]
+
+    }    
+
 ])

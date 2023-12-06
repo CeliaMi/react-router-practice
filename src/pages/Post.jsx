@@ -6,7 +6,7 @@ const Post = () => {
     const {post} = useLoaderData()
 
   return (
-    <article className="card">
+    <article className="card px-4 py-5 my-5">
         <div className="card-header">
             <h5 className="card-title">{post.id} - {post.title}</h5>
         </div>

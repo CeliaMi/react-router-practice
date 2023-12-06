@@ -5,7 +5,7 @@ const Blog = () => {
   const { posts } = useLoaderData() 
   return (
     <>
-    <ul>
+    <ul className='px-4 py-5 my-5'>
       { posts.length > 0 ? (posts.map((blog)=> 
         (
           <div ckey={blog.id} className="list-group">

@@ -3,10 +3,9 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Blog from "../pages/Blog";
 import Post from "../pages/Post";
-import { loaderPost } from "../pages/Post"; 
+import { loaderPost , loaderBlog } from "../services/loaders"; 
 import NotFound from "../pages/NotFound";
 import LayoutPublic from "../layout/LayoutPublic";
-import { loaderBlog } from "../pages/Blog";
 
 export const router = createBrowserRouter([
 

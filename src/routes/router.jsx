@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/Home";
 import About from "../pages/About";
 import Blog from "../pages/Blog";
+import Post from "../pages/Post";
+import { loaderPost } from "../pages/Post"; 
 import NotFound from "../pages/NotFound";
 import LayoutPublic from "../layout/LayoutPublic";
 import { loaderBlog } from "../pages/Blog";
@@ -25,6 +27,11 @@ export const router = createBrowserRouter([
                 path: '/blog',
                 element: <Blog/>,
                 loader:loaderBlog
+            },
+            {
+                path: '/blog/:id',
+                element: <Post/>,
+                loader:loaderPost
             }
 
         ]

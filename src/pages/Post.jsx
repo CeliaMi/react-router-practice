@@ -6,23 +6,18 @@ const Post = () => {
     const {post} = useLoaderData()
 
   return (
-    <>
-        <h1>{post.id} - {post.title}</h1>
-        <p>{post.body}</p>
-        <Link to='/blog'> Back </Link>
-    </>
+    <article className="card">
+        <div className="card-header">
+            <h5 className="card-title">{post.id} - {post.title}</h5>
+        </div>
+        <div className="card-body">
+            <p className="card-text">{post.body}</p>
+            <Link className="btn btn-secondary" to='/blog'> Back </Link>
+        </div>
+    </article>
+    
   )
 }
 
 export default Post
 
-export const loaderPost = async({ params }) => {
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
-
-    if(!res.ok) throw ({
-        status: res.status,
-        statusText:'Not found'
-    })
-    const post = await res.json();
-    return { post };
-}

@@ -19,6 +19,6 @@ export const loaderBlog = async () =>{
       status: res.status,
       statusText:'Not found'
       })
-    const posts = await res.json()
+     const posts = await res.json()
     return { posts };
   }

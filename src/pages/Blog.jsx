@@ -7,9 +7,11 @@ const Blog = () => {
   return (
     <ul>
       { posts.length > 0 ? (posts.map((blog)=> 
-        (<li key={blog.id}> {blog.id} 👉
-          <Link to={`/blog/${blog.id}`}>{blog.title}</Link>
-        </li>)) 
+        (
+        <div ckey={blog.id} className="list-group">
+          <Link className="list-group-item list-group-item-action" to={`/blog/${blog.id}`}>{blog.title}</Link>
+        </div>
+        )) 
       ):( 
         <li> Ups! No blogs found🤷‍♀️</li> 
       )} 
@@ -18,5 +20,8 @@ const Blog = () => {
   ) 
 }
 
+
+
 export default Blog
+
 
